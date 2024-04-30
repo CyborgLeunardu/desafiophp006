@@ -11,7 +11,7 @@
 <?php 
         // Caputrando os dados do formulário retroalimentado
         $dividendo = $_GET['dividendo'] ?? 0;
-        $divisor = $_GET['divisor'] ?? 0;
+        $divisor = $_GET['divisor'] ?? 1;
      
     ?>
     <main>
@@ -31,15 +31,22 @@
         <h2>Estrutura da Divisão</h2>
         <?php 
            $quociente =  intdiv($dividendo,$divisor) ;
-           $resto =  $dividendo % $divisor ;
+           $resto =  $dividendo % $divisor;
    
-        echo "<ul> 
-        <li> Dividendo = $dividendo </li>
-        <li> Divisor = $divisor </li>
-        <li> Quociente = $quociente </li>
-        <li> Resto = $resto </li>
-        </ul>"
+       
+        echo "<table class='divisao'>
+  
+        <tr>
+          <td>$dividendo </td>
+          <td>$divisor </td>
+        </tr>
+        <tr>
+          <td>$resto</td>
+          <td>$quociente</td>
+      </table>"
        ;
+
+
     
         ?>
 </body>
