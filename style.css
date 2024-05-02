@@ -92,9 +92,7 @@ table th {
 }
 
 table td {
-    padding: 5px;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
+   
 }
 
 table tr {
@@ -129,12 +127,8 @@ table.divisao tr:nth-child(2) td:nth-child(1) {
     text-decoration: underline;
 }
 
-table td:first-child {
-    border-left: 3px solid black;
-}
 
-table td:last-child {
-    border-right: 3px solid black;
+
 }
 
 ul > li::marker {
