@@ -9,7 +9,13 @@
 </head>
 
 <body>
-
+    <?php
+    $dividendo = $_GET['dividendo'] ?? 0;
+    $divisor = $_GET['divisor'] ?? 1;
+    $quociente =  intdiv($dividendo, $divisor);
+    $resto =  $dividendo % $divisor;
+    ?>
+    
     <main>
         <h1>
             Anatomia de uma Divisão
@@ -25,22 +31,16 @@
 
     <section id="resultado">
         <h2>Estrutura da Divisão</h2>
-        <?php
-        $dividendo = $_GET['dividendo'] ?? 0;
-        $divisor = $_GET['divisor'] ?? 1;
-        $quociente =  intdiv($dividendo, $divisor);
-        $resto =  $dividendo % $divisor;
+        <table class='divisao'>
+            <tr>
+                <td><?= $dividendo ?> </td>
+                <td><?= $divisor ?> </td>
+            </tr>
+            <tr>
+                <td><?= $resto ?> </td>
+                <td><?= $quociente ?> </td>
+        </table>
 
-        echo "<table class='divisao'>
-        <tr>
-          <td>$dividendo </td>
-          <td>$divisor </td>
-        </tr>
-        <tr>
-          <td>$resto</td>
-          <td>$quociente</td>
-      </table>";
-        ?>
 </body>
 
 </html>
